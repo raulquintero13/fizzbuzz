@@ -9,7 +9,7 @@ describe('test for ExplorerService Class', ()=> {
         const explorer1 = [{name: "Explorer1", score: 1}]
         const explorersValidated = FizzbuzzService.applyValidationInExplorer(explorer1);
         expect(explorersValidated).toEqual(
-            expect.arrayContaining([{name: "Explorer1", score: 12, trick: 1}]),
+            expect.arrayContaining([{name: "Explorer1", score: 1, trick: 1}]),
         );
     })
 

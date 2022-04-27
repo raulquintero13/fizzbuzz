@@ -22,5 +22,8 @@
   "homepage": "https://github.com/raulquintero13/fizzbuzz#readme",
   "devDependencies": {
     "jest": "^28.0.2"
+  },
+  "dependencies": {
+    "express": "^4.18.0"
   }
 }
