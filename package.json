@@ -7,7 +7,8 @@
     "lib": "lib"
   },
   "scripts": {
-    "test": "node ./node_modules/.bin/jest"
+    "test": "node ./node_modules/.bin/jest",
+    "run": "node app.js"
   },
   "repository": {
     "type": "git",
