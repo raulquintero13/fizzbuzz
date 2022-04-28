@@ -4,7 +4,7 @@ const FizzbuzzService = require("../../../lib/services/FizzbuzzService.js");
 // const explorers = Reader.readJsonFile('explorers.json')
 
 
-describe("test for ExplorerService Class", ()=> {
+describe("test for FizzbuzzService Class", ()=> {
     test("test for different of 3 or 5", ()=> {
         const explorer1 = [{name: "Explorer1", score: 1}];
         const explorersValidated = FizzbuzzService.applyValidationInExplorer(explorer1);
@@ -34,4 +34,11 @@ describe("test for ExplorerService Class", ()=> {
             expect.arrayContaining([{name: "Explorer15", score: 15, trick: "FIZZBUZZ"}]),
         );
     });
+
+    test('test for applyValidationInNumber ', ()=>{
+        expect(FizzbuzzService.applyValidationInNumber(1)).toBe(1)
+        expect(FizzbuzzService.applyValidationInNumber(3)).toBe("FIZZ")
+        expect(FizzbuzzService.applyValidationInNumber(5)).toBe("BUZZ")
+        expect(FizzbuzzService.applyValidationInNumber(15)).toBe("FIZZBUZZ")
+    })
 });
