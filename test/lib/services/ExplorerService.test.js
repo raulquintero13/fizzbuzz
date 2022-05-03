@@ -21,4 +21,10 @@ describe("test for ExplorerService Class", ()=> {
             expect.arrayContaining(usernames),
         );
     });
+    test("Requerimiento 4: Crear un nuevo endpoint para un cliente nuevo getExplorerByStack",() =>{
+        const stack = "javascript";
+        const explorersByStack = ExplorerService.filterByStack(explorers, stack);
+        console.log(explorersByStack);
+        expect(explorersByStack.length).toBe(11)
+    })
 });
