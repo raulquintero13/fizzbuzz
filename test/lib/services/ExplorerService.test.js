@@ -24,7 +24,12 @@ describe("test for ExplorerService Class", ()=> {
     test("Requerimiento 4: Crear un nuevo endpoint para un cliente nuevo getExplorerByStack",() =>{
         const stack = "javascript";
         const explorersByStack = ExplorerService.filterByStack(explorers, stack);
-        console.log(explorersByStack);
         expect(explorersByStack.length).toBe(11)
+    })
+    test("Requerimiento 5: LaunchXBot: test para obtener los nombres de los explorers por mission",() =>{
+        const mission = "node";
+        const explorersByStack = ExplorerService.getExplorersNameByMission(explorers, mission);
+        // console.log(explorersByStack);
+        expect(explorersByStack.length).toBe(10)
     })
 });
